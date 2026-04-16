@@ -3,7 +3,7 @@ from django.dispatch import receiver
 from .models import ContentBlock, TermContent
 
 
-@receiver(pre_save, sender=ContentBlock)a
+@receiver(pre_save, sender=ContentBlock)
 def delete_old_file_on_change(sender, instance, **kwargs):
     if not instance.pk:
         return 
